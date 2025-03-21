@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arborescence</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+        }
+
+        .category {
+            margin-bottom: 10px;
+        }
+
+        .category h2 {
+            cursor: pointer;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin: 0;
+        }
+
+        .items {
+            display: none;
+            padding-left: 20px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+
+        .items.show {
+            display: block;
+        }
+
+        .item {
+            margin-bottom: 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="category">
+        <h2 onclick="toggleItems('managementItems')">Management</h2>
+        <div class="items" id="managementItems">
+            <div class="item"><a href="#">M1</a></div>
+            <div class="item"><a href="#">M2</a></div>
+        </div>
+    </div>
+
+    <div class="category">
+        <h2 onclick="toggleItems('realisationsItems')">Réalisations</h2>
+        <div class="items" id="realisationsItems">
+            <div class="item"><a href="#">R1</a></div>
+            <div class="item"><a href="#">R2</a></div>
+            <div class="item"><a href="#">R3</a></div>
+        </div>
+    </div>
+
+    <div class="category">
+        <h2 onclick="toggleItems('supportItems')">Support</h2>
+        <div class="items" id="supportItems">
+            <div class="item"><a href="#">S1</a></div>
+            <div class="item"><a href="#">S2</a></div>
+            <div class="item"><a href="#">S3</a></div>
+            <div class="item"><a href="#">S4</a></div>
+            <div class="item"><a href="#">S5</a></div>
+            <div class="item"><a href="#">S6</a></div>
+            <div class="item"><a href="#">S7</a></div>
+        </div>
+    </div>
+
+    <script>
+        function toggleItems(id) {
+            var items = document.getElementById(id);
+            items.classList.toggle('show');
+        }
+    </script>
+
+</body>
+</html>
